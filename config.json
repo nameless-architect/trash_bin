@@ -2,6 +2,6 @@
     "db": {
         "userName": "sergey",
         "password": "",
-        "connectionString": "mongodb+srv://sergey:GJ4aEoL5Bww3Aq2N@cluster0.lraqe.mongodb.net/firstDB?retryWrites=true&w=majority"
+        "connectionString": "mongodb+srv://sergey:password@cluster0.lraqe.mongodb.net/firstDB?retryWrites=true&w=majority"
     }
 }
