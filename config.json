@@ -1,7 +1,7 @@
 {
     "db": {
         "userName": "sergey",
-        "password": "GJ4aEoL5Bww3Aq2N",
+        "password": "",
         "connectionString": "mongodb+srv://sergey:GJ4aEoL5Bww3Aq2N@cluster0.lraqe.mongodb.net/firstDB?retryWrites=true&w=majority"
     }
 }
