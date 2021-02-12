@@ -11,7 +11,7 @@ class UsersManager:
     def create_user(self, user: dict):
         return self._users_dal.create_user(user)
 
-    def upadate_user(self, user_data):
+    def update_user(self, user_data):
         return self._users_dal.update_user(user_data)
 
     def get_user_by_id(self, user_id):

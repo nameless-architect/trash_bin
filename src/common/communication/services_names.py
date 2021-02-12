@@ -1,0 +1,4 @@
+
+
+class SevicesNames:
+    USERS = 'USERS'
