@@ -7,5 +7,3 @@ class TestTheTests(unittest.TestCase):
     def test_that_test_are_running(self):
         self.assertTrue(True)
         
-    def test_that_test_is_faling(self):
-        self.assertTrue(False)
