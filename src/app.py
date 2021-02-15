@@ -1,4 +1,5 @@
 from flask import request, Flask, Response, jsonify
+from services.generic_proxy.api.generic_service import GenericService
 from services.users.api.users_services import UsersService
 
 from services.users.bl.users_manager import UsersManager
@@ -36,6 +37,35 @@ def get_all_users():
 
 
 # endregion Users service
+
+
+# region Generic Service
+
+@app.route("/create", methods=['POST'])
+def create():
+    request_obj = request.get_json()
+    return GenericService(request_obj['collection_name']).create(request_obj['data'])
+
+
+@app.route("/replace", methods=['POST'])
+def replace():
+    request_obj = request.get_json()
+    GenericService(request_obj['collection_name']).replace(request_obj['data'])
+    return Response(status=200)
+
+
+@app.route("/get_by_id/<id>", methods=['GET'])
+def get_by_id(id: int):
+    request_obj = request.get_json()
+    return jsonify(GenericService(request_obj['collection_name']).get_by_id(id))
+
+
+@app.route("/get_all")
+def get_all():
+    request_obj = request.get_json()
+    return jsonify(GenericService(request_obj['collection_name']).get_all())
+
+# endregion Generic Service
 
 
 @app.route("/", methods=['GET'])
